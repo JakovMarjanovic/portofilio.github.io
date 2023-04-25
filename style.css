@@ -628,8 +628,12 @@ header ul.navli li{
     }
     .citati-unutar{
       flex-direction: column;
-      width: 80% ;
+      width: 70% ;
       margin-right: 3%;
+    }
+    .citati-unutar>div p{
+      font-size: 15px;
+      color: #003c52;
     }
     .citati-unutar>div{
       width: 100% !important;

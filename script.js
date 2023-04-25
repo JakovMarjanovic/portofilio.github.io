@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let zuta = document.getElementById("zuta");
     let obris = document.getElementById("obris");
     let krug = document.getElementById("krug");
+    let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+
 
     window.addEventListener('scroll', function() {
         var value = this.window.scrollY;
@@ -49,11 +51,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (value < 1500) { // check if the scroll position is less than 1000 pixels
           crta.style.transform = 'translateX(-' + value*0.6 + 'px)';
         }
+
          value = value-2000
-         console.log(value)
          if (value < 600) {
-          crta2.style.height = value*1.5+ 'px';
+          if (isMobile) {
+          crta2.style.height = value*1+ 'px';
+        } else {
+          crta2.style.height = value*1.9+ 'px';
         }
+        }
+        
         value = value-10
         if (value < 500) {
           narancasta.style.width = value*0.1+ '%';
@@ -67,8 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  document.getElementById("screen").innerHTML=this.window.scrollY;
-  document.getElementById("screen2").innerHTML=this.window.scrollY;
+
 
 
 
