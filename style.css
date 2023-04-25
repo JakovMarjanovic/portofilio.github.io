@@ -1,0 +1,854 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.sve{
+    width: 100%;
+    height: auto;
+    background-color: #00161e;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 30%;
+}
+.header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    margin-left: 10%;
+    height: 100%;
+    padding: 5% 0;
+}
+.header img{
+    width: 250px;
+    height: auto;
+    width: 100%;
+}
+.header .navli{
+    width: 100%;
+}
+.header .navli{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.header .navli li{
+    list-style: none;
+    display: inline-block;
+    padding: 0 5%;
+}
+.header .navli li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Francois One', sans-serif;
+    font-size: 1.5vw;
+}
+
+/*hamburger menu*/
+.icon{
+  display: none;
+  padding-top: 7%;
+}
+.icon>div{
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px;
+  border-radius: 1.5px;
+}
+header ul.navli li{
+  list-style: none;
+  display: inline-block;
+}
+@media only screen and (max-width: 800px) {
+  .icon{
+    display: block;
+    cursor: pointer;
+    z-index: 4;
+    margin-right: 10%;
+  
+   }
+   .navli{
+    position: fixed;
+    right: 0;
+    height: 92vh;
+    top: 0;
+    background-color:#00161e;
+    border-left: 5px solid white;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 15;
+    animation-name: navLinkFade;
+   }
+   ul.navli{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 3;
+    padding-top: 15%;
+   }
+   .navli li{
+    color: white;
+    width: 100%;
+   }
+   .header .navli li a{
+    font-size: 1.5rem;
+}
+}
+.nav-active{
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*---*/ 
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+.span .position{
+  width: 100%;
+  margin-left:15%;
+  font-size: 5vw;
+  
+}
+.position .staticno{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 5vw;
+}
+/*----------Naslovnica----------*/
+
+.naslovnica{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0 15% 0;
+}
+.naslovnica>div{
+    height: 100%;
+}
+.naslovnica .lijevo{
+    width: 70vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.naslovnica .lijevo .lijevo-unutar{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.naslovnica .lijevo .lijevo-unutar h1{
+    color: white;
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding-left: 10%;
+}
+.naslovnica .desno{
+    flex: 30%;
+    border: 20px solid white;
+    margin-right: 2rem;
+    height: 100%;
+}
+.naslovnica .desno img{
+  width: 100%;
+  height: auto;
+}
+
+/*----------------DRUGI----------------*/
+
+.position{
+    display: flex;
+  }
+  .position .staticno{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .position .dinamicno{
+    margin-top: 0;
+    height: 90px;
+    line-height: 70px;
+    overflow: hidden;
+    position: relative;
+  }
+  .dinamicno li{
+    list-style: none;
+    color: #f57f25;
+    font-size: 60px;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+    border: 1px solid rgba(64, 37, 187, 0);
+  }
+  @keyframes slide {
+    100%{
+      top: -370px;
+    }
+  }
+  .dinamicno li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 5vw;
+  }
+  .dinamicno li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5%;
+    height: 100%;
+    width: 100%;
+    background: #00161e;
+    border-left: 10px solid #d4d4d4;
+    animation: typing 3s steps(10) infinite;
+  }
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+  }
+  .span .position{
+    width: 100%;
+    margin-left:15%;
+    font-size: 5vw;
+    
+  }
+  .position .staticno{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 5vw;
+  }
+
+  @media only screen and (max-width: 800px) {
+    body {
+      background-color: lightblue;
+    }
+    .naslovnica{
+        flex-direction: column;
+    }
+    .naslovnica .lijevo .lijevo-unutar h1{
+        line-height: 2px;
+        font-size: 7vw;
+        padding-left: 5%;
+    }
+    .position .staticno{
+        font-size: 7vw;
+      }
+      .dinamicno li span{
+        font-size: 7vw;
+      }
+    .naslovnica .lijevo{
+        width: 100vw;
+    }
+    .o-meni-unutar{
+      flex-direction: column-reverse;
+    }
+    .o-meni-unutar .lijevo img{
+      width: 50% !important;
+    }
+    .o-meni-unutar .lijevo{
+      border-bottom: 10px solid rgb(255, 255, 255);
+    }
+    .usluge-unutar .dolje>div{
+      flex-direction: column;
+      height: auto;
+    }
+    .usluge-unutar .dolje>div>div{
+      width: 100% !important;
+    }
+    .naslovnica>div{
+      padding: 10% 0;
+  }
+    
+  } 
+    
+  /*o meni*/
+
+  .o-meni{
+    width: 100%;
+    height: auto;
+    background-color: #00161e;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .o-meni-unutar{
+    width: 90%;
+    height: 80%;
+    border-top: 10px solid white;
+    display: flex;
+    position: relative;
+  }
+  .o-meni-unutar::after{
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: 100px;
+    width: 12vw;
+    border-radius: 5px 5px 0 0;
+    height: 60px;
+    background: white;
+  }
+  .o-meni-unutar::before{
+    content: '';
+    position: absolute;
+    top: -35px;
+    right: 50px;
+    width: 10vw;
+    border-radius: 5px 5px 0 0;
+    height: 30px;
+    background: #f57f25;
+    z-index: 2;
+  }
+  .o-meni-unutar .lijevo{
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .o-meni-unutar .lijevo img{
+    width: 90%;
+  }
+  .o-meni-unutar .desno{
+    flex: 70%;
+    padding: 8% 5%;
+  }
+  .o-meni-unutar .desno .tekst h1{
+    font-size: 5rem;
+    color: #f57f25;
+    font-family: 'Bebas Neue', cursive;
+    padding-bottom: 3%;
+  }
+
+  .o-meni-unutar .desno .tekst h2{
+    font-size: 2rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .o-meni-unutar .desno .tekst p{
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  /*vjestine*/
+
+  .o-meni-unutar .desno .vjestine{
+    height: auto;
+    padding-top: 3%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .crta{
+    width: 100%;
+    height: 12px;
+    background-color: rgb(255, 255, 255);
+  }
+
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #fdb913;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.2s ease-in-out;
+}
+.tab-links.active-link::after{
+   width: 50%;
+}
+.tab-contents ul{
+  padding: 0;
+}
+.tab-contents ul li{
+   list-style: none;
+   margin: 10px 0;
+}
+.tab-contents ul li span{
+  color:#fdb913 ;
+  font-size: 24px;
+  font-weight: bold;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-tab{
+  display: block;
+}
+
+/*-----usluge------------*/
+
+.usluge{
+  width:100%;
+  background-color: #00161e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.usluge-unutar{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.usluge-unutar .naslov h1{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5rem;
+  color: #f57f25;
+  padding: 2% 0;
+}
+.usluge-unutar .dolje{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.usluge-unutar .dolje>div{
+  height: auto;
+  display: flex;
+}
+.usluge-unutar .dolje>div>div{
+  width: 50%;
+  margin: 0 4% 4% 0;
+  display: flex;
+  flex-direction: column;
+}
+.usluge-unutar .dolje>div>div .opis{
+  display: flex;
+}
+
+.usluge-unutar .dolje>div>div .tekst{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2% 2% 3% 2%;
+  border: 3px solid rgb(255, 255, 255);
+}
+.usluge-unutar .dolje>div>div .tekst h1{
+  font-size: 3.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.usluge-unutar .dolje>div>div .tekst a{
+  text-decoration: none;
+  color: #fdb913;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.usluge-unutar .dolje>div>div .opis>div{
+  height: 85px;
+}
+.usluge-unutar .dolje>div>div .opis .tehnologija{
+  width: 55px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.usluge-unutar .dolje>div>div .opis .tehnologija p{
+  color: white;
+  transform: translateY(-30px) rotateZ(-90deg);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.usluge-unutar .dolje>div>div .opis .alati{
+  width: 90%;
+  border-left: 3px solid white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:2% 0 2% 3%;
+  position: relative;
+  }
+.usluge-unutar .dolje>div>div .opis .alati h3{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2.5vw;
+  }
+  .usluge-unutar .dolje>div>div .opis .alati #crta2{
+    width: 3px;
+    height: 0;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: -3px;
+    z-index: 2;
+  }
+
+.usluge-unutar .dolje .viz-identiteti{
+  height: 100%;
+  }
+
+  /*---------------CITATI----------*/
+
+  .citati{
+    width: 100%;
+    height: auto;
+    background-color: #00161e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+  }
+  .citati-unutar{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .citati-unutar .lijevo{
+    width: 50%;
+  }
+  .citati-unutar .lijevo .animacija{
+    height: 200px;
+    position: relative;
+  }
+  .citati-unutar .lijevo .animacija .narancasta{
+    width: 100px;
+    height: 30%;
+    background-color: #f57f25;
+    position: absolute;
+    top: 20%;
+    left: 0;
+  }
+  .citati-unutar .lijevo .animacija .zuta{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fdb913;
+  }
+  .citati-unutar .lijevo .animacija .obris{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 7px solid #577cbe;
+    position: absolute;
+    z-index: 2;
+  }
+  .citati-unutar .lijevo .animacija .krug{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #577cbe;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+ 
+  .citati-unutar .lijevo .citat1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 6%;
+  }
+  .citati-unutar .lijevo .citat1 h1{
+    font-size: 5vw;
+    line-height: 1;
+    padding-bottom: 5%;
+  }
+  .citati-unutar .lijevo .citat1 p{
+    font-size: 1.6rem;
+  }
+  .citati-unutar .desno{
+    width: 40%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5% 0;
+  }
+  .citati-unutar .desno h1{
+    font-size: 4vw;
+    line-height: 1;
+    padding-bottom: 5%;
+  }
+  .citati-unutar .desno p{
+    font-size: 1.6rem;
+  }
+  @media only screen and (max-width: 800px) {
+    
+    .usluge-unutar .dolje>div>div{
+      width: 100%;
+    }
+    .citati{
+      justify-content: flex-end;
+    }
+    .citati-unutar{
+      flex-direction: column;
+      width: 80% ;
+      margin-right: 3%;
+    }
+    .citati-unutar>div{
+      width: 100% !important;
+    }
+    .portofolio .portofolio-unutar .dolje{
+      flex-direction: column;
+    }
+    .portofolio .portofolio-unutar .dolje>div{
+      width: 100%;
+    }
+    .punim-unutar{
+      flex-direction: column;
+    }
+    .punim-unutar>div{
+      width: 100%;
+    }
+    
+  } 
+
+  /*------PORTOFOLIO-------*/
+
+  .portofolio{
+    width: 100%;
+    height: auto;
+    padding: 0 0 10% 0;
+    background-color: #00161e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .portofolio-unutar{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .portofolio-unutar .naslov{
+    width: 100%;
+  }
+  .portofolio-unutar .naslov h1{
+    font-size: 10vw;
+    color: #f57f25;
+    padding: 2% 0;
+    font-family: 'Bebas Neue', cursive;
+  }
+  .portofolio-unutar .dolje{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .portofolio-unutar .dolje .tekst{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    width: 40%;
+    font-family: 'Francois One', sans-serif;
+    line-height: 1;
+  }
+  .portofolio-unutar .desno .slika img{
+    width: 90%;
+    border: 10px solid #fdb913;
+  }
+  .portofolio-unutar .desno .slika{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    padding-top: 10%;
+  }
+  .portofolio-unutar .desno .slika .link{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #fdb913;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .portofolio-unutar .desno .slika .link a{
+    font-size: 25px;
+    color: white;
+  }
+  .portofolio-unutar .desno .slika .link li:hover{
+    color: #f57f25;
+  }
+  .portofolio-unutar .desno{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .portofolio-unutar .desno .opis p{
+    font-size: 1.2rem;
+  }
+  .portofolio-unutar .desno .opis{
+    padding: 3%;
+    border-width: 0 5px 5px 0;
+    border-color: #fdb913;
+    border-style: solid;
+    width: 80%;
+  }
+  .portofolio-unutar .desno .opis p a{
+    color: #fdb913;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  /*-------PUNIM PLUĆIMA--------*/
+  .punim{
+    width: 100%;
+    height: auto;
+    background-color: #00161e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 10% 0;
+  }
+  .punim-unutar{
+    width: 90%;
+    height: 90%;
+    display: flex;
+  }
+  .punim-unutar .mobiteli{
+    width: 50%;
+    transform: rotate(-15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .punim-unutar .mobiteli img{
+    width: 40%;
+    height: auto;
+  }
+  .punim-unutar .mobiteli img.mob2{
+    width: 30%;
+  }
+  .punim-unutar .mobiteli .link{
+    width: 70px;
+    height: 70px;
+    background-color: #fdb913;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 90%;
+    right: 30%;
+  }
+  .punim-unutar .mobiteli .link a i{
+    color: white;
+    font-size: 2rem;
+  }
+  .punim-unutar .tekst{
+    width: 50%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .punim-unutar .tekst .tekst-unutar{
+    border-bottom: 5px solid #fdb913;
+    height: auto;
+    padding-bottom: 2%;
+    position: relative;
+  }
+  .punim-unutar .tekst .tekst-unutar a{
+    text-decoration: none;
+    color: #fdb913;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+  }
+  .punim-unutar .tekst .tekst-unutar h1{
+    font-size: 3rem;
+  }
+  .punim-unutar .tekst .tekst-unutar p{
+    font-size: 1.2rem;
+  }
+  .punim-unutar .tekst .tekst-unutar::before{
+    content: '';
+    width: 50%;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    top: -20px;
+    left: 0;
+  }
+   /*----footer-----*/
+   .footer{
+    width: 100%;
+    height: 20vh;
+    background-color: #000d11;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   @media only screen and (max-width: 800px) {
+    .punim-unutar{
+      flex-direction: column-reverse;
+      justify-content: space-between;
+    }
+    .punim-unutar>div{
+      width: 100% !important;
+    }
+    .punim-unutar>div:nth-child(1){
+      margin-top: 80px;
+    }
+    
+  } 
